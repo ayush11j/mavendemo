@@ -79,3 +79,5 @@
 	</build>
 
 </project>
+<!-- Suggested fixes from FixerAgent -->
+<!-- [CRITICAL] Upgrade to version 10.1.35 or later. If using Tomcat 11, upgrade to 11.0.3 or later. If using Tomcat 9, upgrade to 9.0.99 or later. -->
