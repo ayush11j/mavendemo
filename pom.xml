@@ -1,3 +1,4 @@
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -61,6 +62,27 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<exclude>
+							<groupId>org.apache.tomcat.embed</groupId>
+							<artifactId>tomcat-embed-core</artifactId>
+						</exclude>
+					</excludes>
+					<dependencyManagementExclusions>
+						<dependencyManagementExclusion>
+							<groupId>org.apache.tomcat.embed</groupId>
+							<artifactId>tomcat-embed-core</artifactId>
+						</dependencyManagementExclusion>
+					</dependencyManagementExclusions>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>org.apache.tomcat.embed</groupId>
+						<artifactId>tomcat-embed-core</artifactId>
+						<version>10.1.15</version>  <!-- Updated version -->
+					</dependency>
+				</dependencies>
 			</plugin>
 			<plugin>
 				<groupId>org.owasp</groupId>
@@ -79,3 +101,4 @@
 	</build>
 
 </project>
+```
